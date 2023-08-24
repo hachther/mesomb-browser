@@ -1,13 +1,16 @@
 {
-  "name": "mesomb-browser",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@hachther/mesomb-browser",
+  "version": "1.1.0",
+  "description": "JS client for browser to perform mobile payment operation with MeSomb",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": ["React", "ReactNative", "Vue.js", "MeSomb", "Orange Money", "Mobile Money", "Airtel Money"],
+  "repository": "https://github.com/hachther/mesomb-browser.git",
+  "author": "Hachther LLC <contact@hachther.com>",
+  "license": "MIT",
+  "private": false,
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/preset-env": "^7.19.4",
