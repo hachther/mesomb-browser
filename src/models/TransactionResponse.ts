@@ -1,4 +1,3 @@
-import {TransactionData} from "../types";
 import Transaction from "./Transaction";
 
 export default class TransactionResponse {
@@ -10,12 +9,12 @@ export default class TransactionResponse {
   public status: 'SUCCESS' | 'FAILED' | 'PENDING';
 
   constructor(data: Record<string, any>) {
-    this.success = data.success;
-    this.message = data.message;
-    this.redirect = data.redirect;
-    this.transaction = new Transaction(data.transaction);
-    this.reference = data.reference;
-    this.status = data.status;
+    this.success = data['success'];
+    this.message = data['message'];
+    this.redirect = data['redirect'];
+    this.transaction = new Transaction(data['transaction']);
+    this.reference = data['reference'];
+    this.status = data['status'];
   }
 
   public isOperationSuccess(): boolean {

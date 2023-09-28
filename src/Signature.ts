@@ -1,4 +1,4 @@
-import MeSomb from './MeSomb';
+import {MeSomb} from './MeSomb';
 
 export class Signature {
   public static signRequest(
@@ -7,7 +7,7 @@ export class Signature {
     url: string,
     date: Date,
     nonce: string,
-    credentials: Record<string, string>,
+    credentials: {secretKey: string; accessKey: string},
     headers: Record<string, string> = {},
     body?: Record<string, any>,
   ): string {
@@ -17,7 +17,7 @@ export class Signature {
 
     const timestamp = date.getTime();
 
-    headers.host = `${parse.protocol}//${parse.host}`;
+    headers['host'] = `${parse.protocol}//${parse.host}`;
     headers['x-mesomb-date'] = String(timestamp);
     headers['x-mesomb-nonce'] = nonce;
 

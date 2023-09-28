@@ -4,8 +4,8 @@ export default class Location {
   public country: string;
 
   public constructor(data: Record<string, any>) {
-    this.town = data.town;
-    this.region = data.region;
-    this.country = data.country;
+    this.town = data['town'];
+    this.region = data['region'];
+    this.country = data['country'];
   }
 }

@@ -37,10 +37,10 @@ Below some quick examples
 ES6 import
 
 ```JavaScript
-import {PaymentOperation, RandomGenerator} from '@hachther/mesomb';
+import {PaymentOperation, RandomGenerator} from '@hachther/mesomb-browser';
 
 const payment = new PaymentOperation({applicationKey: '<applicationKey>', accessKey: '<AccessKey>', secretKey: '<SecretKey>'});
-const response = await payment.makeCollect({amount: 100, service: 'MTN', payer: '677550203', nonce: RandomGenerator.nonce()});
+const response = await payment.makeCollect({amount: 100, service: 'MTN', payer: '670000000', nonce: RandomGenerator.nonce()});
 console.log(response.isOperationSuccess());
 console.log(response.isTransactionSuccess());
 ```
@@ -48,10 +48,10 @@ console.log(response.isTransactionSuccess());
 Modular include
 
 ```JavaScript
-const {PaymentOperation, RandomGenerator} = require('@hachther/mesomb');
+const {PaymentOperation, RandomGenerator} = require('@hachther/mesomb-browser');
 
 const payment = new PaymentOperation({applicationKey: '<applicationKey>', accessKey: '<AccessKey>', secretKey: '<SecretKey>'});
-const response = await payment.makeCollect({amount: 100, service: 'MTN', payer: '677550203', nonce: RandomGenerator.nonce()});
+const response = await payment.makeCollect({amount: 100, service: 'MTN', payer: '670000000', nonce: RandomGenerator.nonce()});
 console.log(response.isOperationSuccess());
 console.log(response.isTransactionSuccess());
 ```
@@ -61,10 +61,10 @@ console.log(response.isTransactionSuccess());
 ES6 import
 
 ```JavaScript
-import {PaymentOperation, RandomGenerator} from '@hachther/mesomb';
+import {PaymentOperation, RandomGenerator} from '@hachther/mesomb-browser';
 
 const payment = new PaymentOperation({applicationKey: '<applicationKey>', accessKey: '<AccessKey>', secretKey: '<SecretKey>'});
-const response = await payment.makeDeposit({amount: 100, service: 'MTN', receiver: '677550203', nonce: RandomGenerator.nonce()});
+const response = await payment.makeDeposit({amount: 100, service: 'MTN', receiver: '670000000', nonce: RandomGenerator.nonce()});
 console.log(response.isOperationSuccess());
 console.log(response.isTransactionSuccess());
 ```
@@ -72,10 +72,10 @@ console.log(response.isTransactionSuccess());
 Modular include
 
 ```JavaScript
-const {PaymentOperation, RandomGenerator} = require('@hachther/mesomb');
+const {PaymentOperation, RandomGenerator} = require('@hachther/mesomb-browser');
 
 const payment = new PaymentOperation({applicationKey: '<applicationKey>', accessKey: '<AccessKey>', secretKey: '<SecretKey>'});
-const response = await payment.makeDeposit({amount: 100, service: 'MTN', receiver: '677550203', nonce: RandomGenerator.nonce()});
+const response = await payment.makeDeposit({amount: 100, service: 'MTN', receiver: '670000000', nonce: RandomGenerator.nonce()});
 console.log(response.isOperationSuccess());
 console.log(response.isTransactionSuccess());
 ```
@@ -85,7 +85,7 @@ console.log(response.isTransactionSuccess());
 ES6 import
 
 ```JavaScript
-import {PaymentOperation, Signature} from '@hachther/mesomb';
+import {PaymentOperation, Signature} from '@hachther/mesomb-browser';
 
 const payment = new PaymentOperation({applicationKey: '<applicationKey>', accessKey: '<AccessKey>', secretKey: '<SecretKey>'});
 const application = await payment.getStatus();
@@ -95,7 +95,7 @@ console.log(application);
 Modular include
 
 ```JavaScript
-const {PaymentOperation, Signature} = require('@hachther/mesomb');
+const {PaymentOperation, Signature} = require('@hachther/mesomb-browser');
 
 const payment = new PaymentOperation({applicationKey: '<applicationKey>', accessKey: '<AccessKey>', secretKey: '<SecretKey>'});
 const application = await payment.getStatus();
@@ -107,7 +107,7 @@ console.log(application);
 ES6 import
 
 ```JavaScript
-import {PaymentOperation, Signature} from '@hachther/mesomb';
+import {PaymentOperation, Signature} from '@hachther/mesomb-browser';
 
 const payment = new PaymentOperation({applicationKey: '<applicationKey>', accessKey: '<AccessKey>', secretKey: '<SecretKey>'});
 const transactions = await payment.getTransactions(['ID1', 'ID2']);
@@ -117,7 +117,7 @@ console.log(transactions);
 Modular include
 
 ```JavaScript
-const {PaymentOperation, Signature} = require('@hachther/mesomb');
+const {PaymentOperation, Signature} = require('@hachther/mesomb-browser');
 
 const payment = new PaymentOperation({applicationKey: '<applicationKey>', accessKey: '<AccessKey>', secretKey: '<SecretKey>'});
 const transactions = await payment.getTransactions(['ID1', 'ID2']);
